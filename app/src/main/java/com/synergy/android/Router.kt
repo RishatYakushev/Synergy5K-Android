@@ -3,6 +3,7 @@ package com.synergy.android
 import android.content.Context
 import android.content.Intent
 import com.synergy.android.login.LoginActivity
+import com.synergy.android.pincode.PincodeActivity
 import com.synergy.android.profile.ProfileActivity
 import com.synergy.android.registration.RegistrationActivity
 
@@ -34,6 +35,14 @@ class Router(private val appContext: Context) {
 
     fun profile(context: Context, clearStack: Boolean = false) {
         context.startActivity(Intent(context, ProfileActivity::class.java).apply {
+            if (clearStack) {
+                flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+            }
+        })
+    }
+
+    fun pincode(context: Context, clearStack: Boolean = false) {
+        context.startActivity(Intent(context, PincodeActivity::class.java).apply {
             if (clearStack) {
                 flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
             }

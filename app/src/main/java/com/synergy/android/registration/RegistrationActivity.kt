@@ -7,6 +7,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.synergy.android.R
 import com.synergy.android.Router
+import com.synergy.android.util.observeBy
 import com.synergy.android.util.provideViewModel
 import kotlinx.android.synthetic.main.activity_registration.*
 import org.kodein.di.Kodein
@@ -24,19 +25,19 @@ class RegistrationActivity : AppCompatActivity(), KodeinAware {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_registration)
 
-//        viewModel.signupResource.observeBy(
-//            this,
-//            onSuccess = ::navigateToProfile,
-//            onError = ::showError,
-//            onLoading = ::setProgress
-//        )
+        viewModel.signupResource.observeBy(
+                this,
+                onSuccess = ::navigateToPincode,
+                onError = ::showError,
+                onLoading = ::setProgress
+        )
 
         initListeners()
     }
 
-    private fun navigateToProfile() {
+    private fun navigateToPincode() {
         val router by kodein.instance<Router>()
-        router.profile(context = this, clearStack = true)
+        router.pincode(context = this)
     }
 
     private fun navigateToLogin() {
@@ -45,7 +46,9 @@ class RegistrationActivity : AppCompatActivity(), KodeinAware {
     }
 
     private fun initListeners() {
-        bt_signup.setOnClickListener { signup() }
+        bt_signup.setOnClickListener {
+            signup()
+        }
         bt_signin.setOnClickListener { navigateToLogin() }
         et_password.apply {
             setOnEditorActionListener { _, actionId, _ ->
