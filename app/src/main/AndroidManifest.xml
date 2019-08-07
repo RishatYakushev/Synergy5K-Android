@@ -15,6 +15,9 @@
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup,GoogleAppIndexingWarning">
         <activity
+            android:name=".pincode.PincodeActivity"
+            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar" />
+        <activity
             android:name=".registration.RegistrationActivity"
             android:theme="@style/Theme.MaterialComponents.Light.NoActionBar" />
         <activity

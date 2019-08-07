@@ -13,7 +13,7 @@ class CheckableTextInputEditText(context: Context, attrs: AttributeSet?) :
 
     private val textInputLayout: TextInputLayout by lazy {
         val til = parent.parent as TextInputLayout
-        addListeners(til)
+        addListeners()
         til
     }
 
@@ -22,7 +22,7 @@ class CheckableTextInputEditText(context: Context, attrs: AttributeSet?) :
         super.onLayout(changed, left, top, right, bottom)
     }
 
-    private fun addListeners(textInputLayout: TextInputLayout) {
+    private fun addListeners() {
         addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(p0: Editable?) {}
 

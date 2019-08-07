@@ -12,8 +12,8 @@ import com.synergy.android.util.StringResource
 import com.synergy.android.util.toLiveData
 
 class LoginViewModel(
-    private val loginRepository: LoginRepository,
-    private val stringResource: StringResource
+        private val loginRepository: LoginRepository,
+        private val stringResource: StringResource
 ) : ViewModel() {
 
     private val login = MutableLiveData<LoginId>()
@@ -34,17 +34,17 @@ class LoginViewModel(
 
     @VisibleForTesting
     fun emptyLoginResource() =
-        Resource.error<Session>(stringResource.getString(R.string.empty_error)).toLiveData()
+            Resource.error<Session>(stringResource.getString(R.string.empty_error)).toLiveData()
 
     data class LoginId(
-        val username: String,
-        val password: String
+            val username: String,
+            val password: String
     ) {
         fun <T> ifExists(exist: (String, String) -> LiveData<T>, empty: () -> LiveData<T>): LiveData<T> =
-            if (username.isBlank() || password.isBlank()) {
-                empty()
-            } else {
-                exist(username, password)
-            }
+                if (username.isBlank() || password.isBlank()) {
+                    empty()
+                } else {
+                    exist(username, password)
+                }
     }
 }

@@ -26,7 +26,8 @@ ext {
             recyclerview     : 'androidx.recyclerview:recyclerview:1.0.0',
             cardview         : 'androidx.cardview:cardview:1.0.0',
             swipe            : 'androidx.swiperefreshlayout:swiperefreshlayout:1.0.0',
-            lifecycle        : "androidx.lifecycle:lifecycle-extensions:$versions.lifecycle"
+            lifecycle        : "androidx.lifecycle:lifecycle-extensions:$versions.lifecycle",
+            pinview          : 'com.poovam:pin-edittext-field:1.2.1'
     ]
     firebase = [
             firebase_core      : "com.google.firebase:firebase-core:$versions.firebase",

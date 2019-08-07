@@ -8,6 +8,9 @@
     <string name="add_password_hint">Придумайте пароль</string>
     <string name="password_hint">Пароль</string>
     <string name="restore_pass_text">Не помню пароль</string>
+    <string name="confirm_text">Подтвердить</string>
+    <string name="pincode_text">Почти все готово</string>
+    <string name="pincode_desc_text">Мы отправили код регистрации на указанный номер телефона</string>
     <string name="empty_error">Username and Password should not be empty</string>
     <string name="logout">Logout</string>
 
