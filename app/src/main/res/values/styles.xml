@@ -50,6 +50,8 @@
         <item name="android:gravity">center</item>
         <item name="android:layout_marginStart">28dp</item>
         <item name="android:layout_marginEnd">28dp</item>
+        <item name="android:layout_marginTop">28dp</item>
+        <item name="android:layout_marginBottom">28dp</item>
     </style>
 
 </resources>

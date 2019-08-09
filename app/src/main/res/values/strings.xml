@@ -11,6 +11,11 @@
     <string name="confirm_text">Подтвердить</string>
     <string name="pincode_text">Почти все готово</string>
     <string name="pincode_desc_text">Мы отправили код регистрации на указанный номер телефона</string>
+    <string name="recovery_title_text">Восстановление доступа</string>
+    <string name="recovery_button_text">Восстановить доступ</string>
+    <string name="recovery_desc_text">Введите номер телефона, указанный при регистрации</string>
+    <string name="recovery_new_desc_text">Придумайте новый пароль для вашей учетной записи</string>
+    <string name="recovery_new_button_text">Сохранить</string>
     <string name="empty_error">Username and Password should not be empty</string>
     <string name="logout">Logout</string>
 
