@@ -1,11 +1,11 @@
-package com.synergy.android.profile
+package com.synergy.android.main
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.synergy.android.R
-import com.synergy.android.profile.entities.Book
+import com.synergy.android.main.entities.Book
 import kotlinx.android.extensions.LayoutContainer
 import kotlinx.android.synthetic.main.item_book.*
 

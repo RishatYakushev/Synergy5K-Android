@@ -1,8 +1,8 @@
-package com.synergy.android.profile
+package com.synergy.android.main
 
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.synergy.android.profile.entities.Book
+import com.synergy.android.main.entities.Book
 
 class BookAdapter(private val bookList: List<Book>) : RecyclerView.Adapter<BookViewHolder>() {
 

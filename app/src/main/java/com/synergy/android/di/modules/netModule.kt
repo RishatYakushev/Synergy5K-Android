@@ -5,6 +5,9 @@ import com.google.gson.GsonBuilder
 import com.synergy.android.BuildConfig
 import com.synergy.android.login.entities.LoginRequest
 import com.synergy.android.login.entities.LoginResponse
+import com.synergy.android.main.entities.Book
+import com.synergy.android.main.entities.Profile
+import com.synergy.android.main.entities.ProfileResponse
 import com.synergy.android.model.entities.Session
 import com.synergy.android.model.network.ApiErrorResponse
 import com.synergy.android.model.network.ApiResponse
@@ -12,9 +15,6 @@ import com.synergy.android.model.network.ApiSuccessResponse
 import com.synergy.android.model.network.IApi
 import com.synergy.android.model.network.adapter.CoroutineCallAdapterFactory
 import com.synergy.android.model.network.errors.ServerError
-import com.synergy.android.profile.entities.Book
-import com.synergy.android.profile.entities.Profile
-import com.synergy.android.profile.entities.ProfileResponse
 import kotlinx.coroutines.CompletableDeferred
 import kotlinx.coroutines.Deferred
 import okhttp3.OkHttpClient

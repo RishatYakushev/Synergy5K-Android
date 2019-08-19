@@ -1,12 +1,12 @@
-package com.synergy.android.profile
+package com.synergy.android.main
 
 import androidx.arch.core.executor.ArchTaskExecutor
 import androidx.lifecycle.LiveData
 import com.synergy.android.login.LoginRepository
+import com.synergy.android.main.entities.Profile
+import com.synergy.android.main.entities.ProfileResponse
 import com.synergy.android.model.entities.Resource
 import com.synergy.android.model.network.NetworkBoundResource
-import com.synergy.android.profile.entities.Profile
-import com.synergy.android.profile.entities.ProfileResponse
 import com.synergy.android.test_utils.InstantLiveDataExecutor
 import io.mockk.*
 import kotlinx.coroutines.Dispatchers

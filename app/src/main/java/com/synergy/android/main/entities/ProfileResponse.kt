@@ -1,4 +1,4 @@
-package com.synergy.android.profile.entities
+package com.synergy.android.main.entities
 
 import com.google.gson.annotations.SerializedName
 

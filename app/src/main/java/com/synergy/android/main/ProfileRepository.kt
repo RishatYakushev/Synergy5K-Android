@@ -1,12 +1,12 @@
-package com.synergy.android.profile
+package com.synergy.android.main
 
+import com.synergy.android.main.entities.Profile
+import com.synergy.android.main.entities.ProfileResponse
 import com.synergy.android.model.db.daos.ProfileDao
 import com.synergy.android.model.network.ApiResponse
 import com.synergy.android.model.network.IApi
 import com.synergy.android.model.network.NetworkBoundResource
 import com.synergy.android.model.network.errors.ErrorHandler
-import com.synergy.android.profile.entities.Profile
-import com.synergy.android.profile.entities.ProfileResponse
 import kotlinx.coroutines.*
 
 class ProfileRepository(

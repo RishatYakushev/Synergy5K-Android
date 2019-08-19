@@ -34,4 +34,15 @@
     <string name="books">Books</string>
     <string name="registration_text">Регистрация</string>
     <string name="empty_field_text">Поле не должно быть пустым</string>
+
+    <!--Menu items-->
+    <string name="map_menu_text">Карта</string>
+    <string name="profile_menu_text">Профиль</string>
+    <string name="action_menu_text">Акции</string>
+    <string name="settings_menu_text">Настройки</string>
+    <string name="filter_text">Фильтр</string>
+    <string name="list_text">Список</string>
+    <string name="wheel_menu_text">Шиномонтаж</string>
+    <string name="wash_menu_text">Автомойка</string>
+    <string name="service_menu_text">Автосервис</string>
 </resources>
