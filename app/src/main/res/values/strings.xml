@@ -45,4 +45,9 @@
     <string name="wheel_menu_text">Шиномонтаж</string>
     <string name="wash_menu_text">Автомойка</string>
     <string name="service_menu_text">Автосервис</string>
+
+    <string name="google_maps_key" translatable="false" templateMergeStrategy="preserve">
+        AIzaSyBv2XFl9mc8khorBmyi45VMKvkEEnUJ-mE
+    </string>
+
 </resources>
