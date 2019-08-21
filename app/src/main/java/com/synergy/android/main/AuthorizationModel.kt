@@ -1,4 +1,4 @@
-package com.synergy.android.profile
+package com.synergy.android.main
 
 import androidx.room.withTransaction
 import com.synergy.android.model.db.AppDatabase

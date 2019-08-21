@@ -50,7 +50,7 @@ class RegistrationActivity : AppCompatActivity(), KodeinAware {
 
     private fun navigateToProfile() {
         val router by kodein.instance<Router>()
-        router.profile(context = this, clearStack = true)
+        router.main(context = this, clearStack = true)
     }
 
     private fun initListeners() {

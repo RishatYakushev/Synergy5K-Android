@@ -2,10 +2,10 @@ package com.synergy.android.di.modules
 
 import android.content.Context
 import androidx.room.Room
+import com.synergy.android.main.AuthorizationModel
 import com.synergy.android.model.db.AppDatabase
 import com.synergy.android.model.db.daos.ProfileDao
 import com.synergy.android.model.db.daos.SessionDao
-import com.synergy.android.profile.AuthorizationModel
 import org.kodein.di.Kodein
 import org.kodein.di.generic.bind
 import org.kodein.di.generic.instance

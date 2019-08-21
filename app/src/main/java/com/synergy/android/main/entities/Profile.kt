@@ -1,4 +1,4 @@
-package com.synergy.android.profile.entities
+package com.synergy.android.main.entities
 
 import androidx.room.Embedded
 import androidx.room.Entity
@@ -6,7 +6,7 @@ import androidx.room.Ignore
 import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
 
-@Entity(tableName = "profile")
+@Entity(tableName = "main")
 data class Profile(
     @PrimaryKey(autoGenerate = true)
     val id: Int,

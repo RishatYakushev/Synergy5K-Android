@@ -1,7 +1,7 @@
 package com.synergy.android.di.modules
 
 import com.synergy.android.login.LoginRepository
-import com.synergy.android.profile.ProfileRepository
+import com.synergy.android.main.ProfileRepository
 import org.kodein.di.Kodein
 import org.kodein.di.generic.bind
 import org.kodein.di.generic.instance

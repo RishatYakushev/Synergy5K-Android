@@ -2,7 +2,7 @@ package com.synergy.android
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.synergy.android.profile.AuthorizationModel
+import com.synergy.android.main.AuthorizationModel
 import kotlinx.coroutines.runBlocking
 import org.kodein.di.KodeinAware
 import org.kodein.di.android.kodein
@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity(), KodeinAware {
 
         runBlocking {
             if (authorizationModel.isAuthorized()) {
-                router.profile(this@MainActivity)
+                router.main(this@MainActivity)
             } else {
                 router.login(this@MainActivity)
             }

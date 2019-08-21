@@ -1,4 +1,4 @@
-package com.synergy.android.profile
+package com.synergy.android.main
 
 import androidx.annotation.VisibleForTesting
 import androidx.lifecycle.ViewModel

@@ -4,8 +4,8 @@ import androidx.annotation.VisibleForTesting
 import com.google.gson.Gson
 import com.google.gson.JsonSyntaxException
 import com.synergy.android.Router
+import com.synergy.android.main.AuthorizationModel
 import com.synergy.android.model.network.ErrorResponse
-import com.synergy.android.profile.AuthorizationModel
 import com.synergy.android.util.StringResource
 import com.synergy.android.util.userMessage
 import retrofit2.HttpException
