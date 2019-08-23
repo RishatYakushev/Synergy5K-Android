@@ -50,4 +50,14 @@
         AIzaSyBv2XFl9mc8khorBmyi45VMKvkEEnUJ-mE
     </string>
 
+    <!--Profile screen-->
+    <string name="profile_logout_text">Выйти</string>
+    <string name="profile_card_title_discount">ваша\nскидка</string>
+    <string name="profile_card_title_common_discount">групповая\nскидка</string>
+    <string name="profile_card_title_point">баллов\nна счете</string>
+    <string name="profile_card_loyalty_desc">Программа\nлояльности</string>
+    <string name="profile_card_orders_desc">Мои\nзаказы</string>
+    <string name="profile_add_car">Добавьте\nавтомобиль</string>
+    <string name="profile_privacy">Пользовательское соглашение</string>
+
 </resources>

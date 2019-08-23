@@ -14,8 +14,7 @@ import androidx.fragment.app.Fragment
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.synergy.android.R
 import com.synergy.android.map.MapFragment
-import com.synergy.android.util.observeBy
-import com.synergy.android.util.provideViewModel
+import com.synergy.android.profile.ProfileFragment
 import kotlinx.android.synthetic.main.activity_main.*
 import org.kodein.di.Kodein
 import org.kodein.di.KodeinAware
@@ -28,10 +27,9 @@ class MainActivity : AppCompatActivity(), KodeinAware, SwipeRefreshLayout.OnRefr
 
     private var mLocationPermissionGranted = false
     private val mapFragment by lazy { MapFragment.newInstance() }
+    private val profileFragment by lazy { ProfileFragment.newInstance() }
 
     override val kodein: Kodein by kodein()
-
-    private val viewModel: ProfileViewModel by provideViewModel()
 
     private var wheelFilter = false
     private var washFilter = false
@@ -41,21 +39,16 @@ class MainActivity : AppCompatActivity(), KodeinAware, SwipeRefreshLayout.OnRefr
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        viewModel.profileResponse.observeBy(
-                this,
-                onNext = {
-                    showProfile()
-                },
-                onError = ::showError,
-                onLoading = ::visibleProgress
-        )
-
         setSupportActionBar(toolbar)
 
         bottom_navigation.setOnNavigationItemSelectedListener {
             when (it.itemId) {
                 R.id.map_menu -> {
                     loadFragment(mapFragment)
+                    true
+                }
+                R.id.profile_menu -> {
+                    loadFragment(profileFragment)
                     true
                 }
                 else -> false
@@ -144,7 +137,6 @@ class MainActivity : AppCompatActivity(), KodeinAware, SwipeRefreshLayout.OnRefr
     }
 
     override fun onRefresh() {
-        viewModel.updateProfile()
     }
 
     private fun visibleProgress(show: Boolean) {
