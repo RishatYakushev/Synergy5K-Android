@@ -27,12 +27,19 @@ ext {
             cardview         : 'androidx.cardview:cardview:1.0.0',
             swipe            : 'androidx.swiperefreshlayout:swiperefreshlayout:1.0.0',
             lifecycle        : "androidx.lifecycle:lifecycle-extensions:$versions.lifecycle",
-            pinview          : 'com.poovam:pin-edittext-field:1.2.1'
+            lifecycle_ktx    : 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.0.0',
+            pinview          : 'com.poovam:pin-edittext-field:1.2.1',
+            multidex         : 'com.android.support:multidex:1.0.3'
     ]
     firebase = [
             firebase_core      : "com.google.firebase:firebase-core:$versions.firebase",
             firebase_analytics : "com.google.firebase:firebase-analytics:$versions.firebase",
             crashlytics        : 'com.crashlytics.sdk.android:crashlytics:2.10.1'
+    ]
+    maps = [
+            gms_maps       : 'com.google.android.gms:play-services-maps:17.0.0',
+            legacy_support : 'androidx.legacy:legacy-support-v4:1.0.0',
+            location       : 'com.google.android.gms:play-services-location:17.0.0'
     ]
     room = [
             room    : "androidx.room:room-runtime:$versions.room",
@@ -69,6 +76,7 @@ ext {
 
     androidLibs = androidx.values()
     firebaseLibs = firebase.values()
+    mapLibs = maps.values()
     retrofitLibs = retrofit.values()
     coroutinesLibs = coroutines.values()
     kodeinLibs = kodein.values()

@@ -18,19 +18,19 @@ import com.google.android.gms.maps.model.MarkerOptions
 
 
 class MapFragment : Fragment(), OnMapReadyCallback, GoogleApiClient.ConnectionCallbacks,
-    GoogleApiClient.OnConnectionFailedListener {
+        GoogleApiClient.OnConnectionFailedListener {
 
     private var listener: OnMapListener? = null
     private lateinit var mGoogleApiClient: GoogleApiClient
     private lateinit var mMap: GoogleMap
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+            inflater: LayoutInflater, container: ViewGroup?,
+            savedInstanceState: Bundle?
     ): View? {
         val rootView = inflater.inflate(com.synergy.android.R.layout.fragment_map, container, false)
         val mapFragment =
-            childFragmentManager.findFragmentById(com.synergy.android.R.id.map) as SupportMapFragment?
+                childFragmentManager.findFragmentById(com.synergy.android.R.id.map) as SupportMapFragment?
         mapFragment!!.getMapAsync(this)
 
         return rootView
@@ -52,8 +52,11 @@ class MapFragment : Fragment(), OnMapReadyCallback, GoogleApiClient.ConnectionCa
             LocationServices.getFusedLocationProviderClient(activity!!).apply {
                 lastLocation?.addOnCompleteListener {
                     if (it.isSuccessful) {
-                        val mLastKnownLocation = it.result!!
-                        moveMap(LatLng(mLastKnownLocation.latitude, mLastKnownLocation.longitude))
+                        val mLastKnownLocation = it.result
+                        if (mLastKnownLocation != null) {
+                            moveMap(LatLng(mLastKnownLocation.latitude,
+                                    mLastKnownLocation.longitude))
+                        }
                     } else {
                         mMap.uiSettings.isMyLocationButtonEnabled = false
                     }
