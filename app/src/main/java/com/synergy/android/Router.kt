@@ -7,6 +7,12 @@ import com.synergy.android.login.LoginActivity
 import com.synergy.android.main.MainActivity
 import com.synergy.android.pincode.PincodeActivity
 import com.synergy.android.pincode.PincodeActivity.Companion.PINCODE_REQUEST_CODE
+import com.synergy.android.profile.ProfileEditActivity
+import com.synergy.android.profile.ProfileEditNameActivity
+import com.synergy.android.profile.ProfileEditNameActivity.Companion.NAME_EXTRA_NAME
+import com.synergy.android.profile.ProfileEditNameActivity.Companion.NAME_REQUEST_CODE
+import com.synergy.android.profile.ProfileEditNameActivity.Companion.SURNAME2_EXTRA_NAME
+import com.synergy.android.profile.ProfileEditNameActivity.Companion.SURNAME_EXTRA_NAME
 import com.synergy.android.recovery.RecoveryActivity
 import com.synergy.android.recovery.RecoveryActivity.Companion.PINCODE_VALID_EXTRA_NAME
 import com.synergy.android.registration.RegistrationActivity
@@ -69,5 +75,19 @@ class Router(private val appContext: Context) {
                 putExtra(PINCODE_VALID_EXTRA_NAME, true)
             }
         })
+    }
+
+    fun editProfile(context: Context) {
+        context.startActivity(Intent(context, ProfileEditActivity::class.java))
+    }
+
+    fun editName(context: AppCompatActivity, name: String, surname: String, surname2: String) {
+        context.startActivityForResult(Intent(context, ProfileEditNameActivity::class.java)
+                .apply {
+                    putExtra(NAME_EXTRA_NAME, name)
+                    putExtra(SURNAME_EXTRA_NAME, surname)
+                    putExtra(SURNAME2_EXTRA_NAME, surname2)
+                },
+                NAME_REQUEST_CODE)
     }
 }
