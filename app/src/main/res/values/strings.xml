@@ -4,6 +4,7 @@
     <string name="signin_text">Войти</string>
     <string name="name_hint">Имя</string>
     <string name="surname_hint">Фамилия</string>
+    <string name="surname2_hint">Отчество</string>
     <string name="phone_hint">Номер телефона</string>
     <string name="add_password_hint">Придумайте пароль</string>
     <string name="password_hint">Пароль</string>
@@ -45,8 +46,9 @@
     <string name="wheel_menu_text">Шиномонтаж</string>
     <string name="wash_menu_text">Автомойка</string>
     <string name="service_menu_text">Автосервис</string>
+    <string name="done_menu_text">Готово</string>
 
-    <string name="google_maps_key" translatable="false" templateMergeStrategy="preserve">
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">
         AIzaSyBv2XFl9mc8khorBmyi45VMKvkEEnUJ-mE
     </string>
 
@@ -59,5 +61,15 @@
     <string name="profile_card_orders_desc">Мои\nзаказы</string>
     <string name="profile_add_car">Добавьте\nавтомобиль</string>
     <string name="profile_privacy">Пользовательское соглашение</string>
+
+    <!--Profile Edit screen-->
+    <string name="profile_edit_title_private">Личная информация</string>
+    <string name="profile_edit_subtitle_name">ФИО</string>
+    <string name="profile_edit_title_contact">Контактная информация</string>
+    <string name="profile_edit_subtitle_email">E-mail</string>
+    <string name="profile_edit_subtitle_phone">Телефон</string>
+    <string name="profile_edit_change_avatar">Изменить фотографию</string>
+    <string name="profile_edit_toolbar_title">Редактировать профиль</string>
+    <string name="profile_edit_name_toolbar_title">ФИО</string>
 
 </resources>
