@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".profile.ProfileEditPhoneActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        style="@style/Toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:text="@string/profile_edit_phone_put_phone"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        tools:text="@string/profile_edit_phone_put_pincode" />
+
+    <FrameLayout
+        android:id="@+id/common_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_title">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/et_phone_l"
+            style="@style/AuthScreen_TextInputLayout"
+            android:layout_marginTop="30dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp">
+
+            <com.synergy.android.util.ui.CheckableTextInputEditText
+                android:id="@+id/et_phone"
+                android:gravity="center"
+                style="@style/AuthScreen_TextInputEditText"
+                android:imeOptions="actionNext"
+                android:inputType="phone" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.poovam.pinedittextfield.LinePinField
+            android:id="@+id/ov_pincode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
+            android:background="@android:color/white"
+            android:inputType="number"
+            android:paddingStart="16dp"
+            android:layout_gravity="center"
+            android:paddingEnd="16dp"
+            android:textSelectHandle="@drawable/text_handle"
+            app:bottomTextPaddingDp="10dp"
+            app:distanceInBetween="5dp"
+            app:highlightColor="@android:color/black"
+            app:highlightType="allFields"
+            app:isCustomBackground="true"
+            app:itemBackground="@android:color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_title"
+            app:lineThickness="2dp"
+            app:noOfFields="4"
+            tools:text="1234" />
+    </FrameLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/bt_submit"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="@string/profile_edit_phone_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/common_layout" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

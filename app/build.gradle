@@ -91,6 +91,8 @@ dependencies {
     implementation 'com.github.bumptech.glide:glide:4.9.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
 
+    implementation 'com.redmadrobot:input-mask-android:4.3.1'
+
     kapt compilerLibs
 
     testImplementation unitTestLibs

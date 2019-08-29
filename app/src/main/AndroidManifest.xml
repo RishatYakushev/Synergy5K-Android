@@ -16,6 +16,9 @@
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup,GoogleAppIndexingWarning">
         <activity
+            android:name=".profile.ProfileEditPhoneActivity"
+            android:screenOrientation="portrait" />
+        <activity
             android:name=".profile.ProfileEditNameActivity"
             android:screenOrientation="portrait" />
         <activity

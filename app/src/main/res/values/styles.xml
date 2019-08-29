@@ -109,4 +109,10 @@
         <item name="android:layout_marginTop">16dp</item>
         <item name="android:layout_height">1dp</item>
     </style>
+
+    <style name="Toolbar">
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="popupTheme">@style/ThemeOverlay.MaterialComponents.Light</item>
+        <item name="theme">@style/ThemeOverlay.MaterialComponents.Dark.ActionBar</item>
+    </style>
 </resources>

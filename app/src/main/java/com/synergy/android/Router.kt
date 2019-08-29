@@ -13,6 +13,9 @@ import com.synergy.android.profile.ProfileEditNameActivity.Companion.NAME_EXTRA_
 import com.synergy.android.profile.ProfileEditNameActivity.Companion.NAME_REQUEST_CODE
 import com.synergy.android.profile.ProfileEditNameActivity.Companion.SURNAME2_EXTRA_NAME
 import com.synergy.android.profile.ProfileEditNameActivity.Companion.SURNAME_EXTRA_NAME
+import com.synergy.android.profile.ProfileEditPhoneActivity
+import com.synergy.android.profile.ProfileEditPhoneActivity.Companion.PHONE_EXTRA_NAME
+import com.synergy.android.profile.ProfileEditPhoneActivity.Companion.PHONE_REQUEST_CODE
 import com.synergy.android.recovery.RecoveryActivity
 import com.synergy.android.recovery.RecoveryActivity.Companion.PINCODE_VALID_EXTRA_NAME
 import com.synergy.android.registration.RegistrationActivity
@@ -89,5 +92,13 @@ class Router(private val appContext: Context) {
                     putExtra(SURNAME2_EXTRA_NAME, surname2)
                 },
                 NAME_REQUEST_CODE)
+    }
+
+    fun editPhone(context: AppCompatActivity, phone: String) {
+        context.startActivityForResult(Intent(context, ProfileEditPhoneActivity::class.java)
+                .apply {
+                    putExtra(PHONE_EXTRA_NAME, phone)
+                },
+                PHONE_REQUEST_CODE)
     }
 }
