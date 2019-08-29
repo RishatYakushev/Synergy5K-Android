@@ -35,6 +35,7 @@
     <string name="books">Books</string>
     <string name="registration_text">Регистрация</string>
     <string name="empty_field_text">Поле не должно быть пустым</string>
+    <string name="phone_validate_text">Введите корректный номер телефона</string>
 
     <!--Menu items-->
     <string name="map_menu_text">Карта</string>

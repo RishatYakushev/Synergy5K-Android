@@ -44,7 +44,6 @@
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/et_phone_l"
             style="@style/AuthScreen_TextInputLayout"
-            android:hint="@string/phone_hint"
             app:boxBackgroundColor="@android:color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
