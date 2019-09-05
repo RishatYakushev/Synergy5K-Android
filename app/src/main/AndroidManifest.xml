@@ -15,6 +15,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup,GoogleAppIndexingWarning">
+        <activity android:name=".profile.LoyaltyActivity"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".profile.ProfileEditPhoneActivity"
             android:screenOrientation="portrait" />

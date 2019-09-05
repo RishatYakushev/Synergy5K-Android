@@ -25,40 +25,47 @@ class CheckableTextInputEditText(context: Context, attrs: AttributeSet?) :
         textInputLayout.isErrorEnabled = true
     }
 
-    private fun addListeners(textInputLayout:TextInputLayout) {
-        if (inputType == InputType.TYPE_CLASS_PHONE) {
-            val phoneListener = MaskedTextChangedListener.Companion.installOn(
-                this,
-                "+7 ([000]) [000]-[00]-[00]",
-                affinityCalculationStrategy = AffinityCalculationStrategy.PREFIX,
-                listener = object : TextWatcher {
-                    override fun afterTextChanged(p0: Editable?) {
-                        emptyValidate(p0?.length != 18)
+    private fun addListeners(textInputLayout: TextInputLayout) {
+        when (inputType) {
+            InputType.TYPE_CLASS_PHONE -> {
+                val phoneListener = MaskedTextChangedListener.Companion.installOn(
+                    this,
+                    "+7 ([000]) [000]-[00]-[00]",
+                    affinityCalculationStrategy = AffinityCalculationStrategy.PREFIX,
+                    listener = object : TextWatcher {
+                        override fun afterTextChanged(p0: Editable?) {
+                            emptyValidate(p0?.length != 18)
+                        }
+
+                        override fun beforeTextChanged(
+                            p0: CharSequence?, p1: Int, p2: Int,
+                            p3: Int
+                        ) {
+                        }
+
+                        override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {}
                     }
+                )
+                hint = phoneListener.placeholder()
+                textInputLayout.hint = ""
+            }
+            else -> {
+                addTextChangedListener(object : TextWatcher {
+                    override fun afterTextChanged(p0: Editable?) {}
 
                     override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {}
 
-                    override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {}
+                    override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+                        emptyValidate(p0?.isEmpty() ?: true)
+                    }
+                })
+                setOnEditorActionListener { p0, _, _ ->
+                    emptyValidate(p0.text.isEmpty())
+                    false
                 }
-            )
-            hint = phoneListener.placeholder()
-            textInputLayout.hint = ""
-        } else {
-            addTextChangedListener(object : TextWatcher {
-                override fun afterTextChanged(p0: Editable?) {}
-
-                override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {}
-
-                override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
-                    emptyValidate(p0?.isEmpty() ?: true)
+                setOnFocusChangeListener { _, _ ->
+                    emptyValidate(text?.isEmpty() ?: true)
                 }
-            })
-            setOnEditorActionListener { p0, _, _ ->
-                emptyValidate(p0.text.isEmpty())
-                false
-            }
-            setOnFocusChangeListener { _, _ ->
-                emptyValidate(text?.isEmpty() ?: true)
             }
         }
     }
