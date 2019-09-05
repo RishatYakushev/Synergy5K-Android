@@ -83,4 +83,9 @@
     <string name="loyalty_description">Это ваш реферальный код, который вы можете скопировать и поделиться. С помошью которого вы можете подключать ваших друзей, знакомы и родственников к партнерской программе.</string>
     <string name="loyalty_description2">Чтобы приглашать и подключать ваших друзей, знакомых и родственников к партнерской программе им нужно установить приложение и отсканировать этот реферальный код.</string>
 
+    <!--Order screen-->
+    <string name="orders_toolbar_title">Мои заказы</string>
+    <string name="order_wait_tab_title">В ожидании</string>
+    <string name="order_done_tab_title">Выполненные</string>
+
 </resources>
