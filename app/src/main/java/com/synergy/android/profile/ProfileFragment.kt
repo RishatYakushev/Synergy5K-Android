@@ -49,13 +49,11 @@ class ProfileFragment : Fragment(), KodeinAware {
         tv_discount.text = "10 %"
         tv_common_discount.text = "5 %"
 
-        iv_edit.setOnClickListener {
-            val router by kodein.instance<Router>()
-            router.editProfile(activity!!)
-        }
+        val router by kodein.instance<Router>()
+        iv_edit.setOnClickListener { router.editProfile(activity!!) }
+        cv_loyalty.setOnClickListener { router.loyalty(activity!!) }
         tv_logout.setOnClickListener {
             viewModel.logout()
-            val router by kodein.instance<Router>()
             router.login(activity!!, clearStack = true)
         }
     }

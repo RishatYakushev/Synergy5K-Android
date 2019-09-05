@@ -77,4 +77,10 @@
     <string name="profile_edit_phone_put_pincode">Введите код из смс-сообщения</string>
     <string name="profile_edit_phone_put_phone">Введите ваш новый номер телефона, мы пришлем на него смс для активации</string>
 
+    <!--Loyalty screen-->
+    <string name="loyalty_toolbar_title">Программа лояльности</string>
+    <string name="loyalty_title">Ваш реферальный код</string>
+    <string name="loyalty_description">Это ваш реферальный код, который вы можете скопировать и поделиться. С помошью которого вы можете подключать ваших друзей, знакомы и родственников к партнерской программе.</string>
+    <string name="loyalty_description2">Чтобы приглашать и подключать ваших друзей, знакомых и родственников к партнерской программе им нужно установить приложение и отсканировать этот реферальный код.</string>
+
 </resources>

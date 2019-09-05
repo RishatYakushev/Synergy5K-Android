@@ -7,6 +7,7 @@ import com.synergy.android.login.LoginActivity
 import com.synergy.android.main.MainActivity
 import com.synergy.android.pincode.PincodeActivity
 import com.synergy.android.pincode.PincodeActivity.Companion.PINCODE_REQUEST_CODE
+import com.synergy.android.profile.LoyaltyActivity
 import com.synergy.android.profile.ProfileEditActivity
 import com.synergy.android.profile.ProfileEditNameActivity
 import com.synergy.android.profile.ProfileEditNameActivity.Companion.NAME_EXTRA_NAME
@@ -100,5 +101,9 @@ class Router(private val appContext: Context) {
                     putExtra(PHONE_EXTRA_NAME, phone)
                 },
                 PHONE_REQUEST_CODE)
+    }
+
+    fun loyalty(context: Context) {
+        context.startActivity(Intent(context, LoyaltyActivity::class.java))
     }
 }
