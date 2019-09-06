@@ -87,5 +87,7 @@
     <string name="orders_toolbar_title">Мои заказы</string>
     <string name="order_wait_tab_title">В ожидании</string>
     <string name="order_done_tab_title">Выполненные</string>
+    <string name="order_wait_call_button">Позвонить</string>
+    <string name="order_wait_map_button">Маршрут</string>
 
 </resources>
