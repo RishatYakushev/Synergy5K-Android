@@ -115,4 +115,9 @@
         <item name="popupTheme">@style/ThemeOverlay.MaterialComponents.Light</item>
         <item name="theme">@style/ThemeOverlay.MaterialComponents.Dark.ActionBar</item>
     </style>
+
+    <style name="Ratingbar" parent="Theme.AppCompat">
+        <item name="colorControlNormal">@color/unactive_menu</item>
+        <item name="colorControlActivated">@color/colorPrimary</item>
+    </style>
 </resources>

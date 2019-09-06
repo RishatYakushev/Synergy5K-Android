@@ -9,4 +9,5 @@
     <color name="active_menu">#CD0C63</color>
     <color name="unactive_menu">#ADADAD</color>
     <color name="divider_color">#1F000000</color>
+    <color name="inactive_tab">#8CA7EE</color>
 </resources>

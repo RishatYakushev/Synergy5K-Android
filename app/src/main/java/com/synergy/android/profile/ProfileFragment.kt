@@ -52,6 +52,7 @@ class ProfileFragment : Fragment(), KodeinAware {
         val router by kodein.instance<Router>()
         iv_edit.setOnClickListener { router.editProfile(activity!!) }
         cv_loyalty.setOnClickListener { router.loyalty(activity!!) }
+        cv_orders.setOnClickListener { router.orders(activity!!) }
         tv_logout.setOnClickListener {
             viewModel.logout()
             router.login(activity!!, clearStack = true)

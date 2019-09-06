@@ -5,6 +5,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import com.synergy.android.login.LoginActivity
 import com.synergy.android.main.MainActivity
+import com.synergy.android.order.OrdersActivity
 import com.synergy.android.pincode.PincodeActivity
 import com.synergy.android.pincode.PincodeActivity.Companion.PINCODE_REQUEST_CODE
 import com.synergy.android.profile.LoyaltyActivity
@@ -105,5 +106,9 @@ class Router(private val appContext: Context) {
 
     fun loyalty(context: Context) {
         context.startActivity(Intent(context, LoyaltyActivity::class.java))
+    }
+
+    fun orders(context: Context) {
+        context.startActivity(Intent(context, OrdersActivity::class.java))
     }
 }
