@@ -8,14 +8,11 @@ import com.synergy.android.main.MainActivity
 import com.synergy.android.order.OrdersActivity
 import com.synergy.android.pincode.PincodeActivity
 import com.synergy.android.pincode.PincodeActivity.Companion.PINCODE_REQUEST_CODE
-import com.synergy.android.profile.LoyaltyActivity
-import com.synergy.android.profile.ProfileEditActivity
-import com.synergy.android.profile.ProfileEditNameActivity
+import com.synergy.android.profile.*
 import com.synergy.android.profile.ProfileEditNameActivity.Companion.NAME_EXTRA_NAME
 import com.synergy.android.profile.ProfileEditNameActivity.Companion.NAME_REQUEST_CODE
 import com.synergy.android.profile.ProfileEditNameActivity.Companion.SURNAME2_EXTRA_NAME
 import com.synergy.android.profile.ProfileEditNameActivity.Companion.SURNAME_EXTRA_NAME
-import com.synergy.android.profile.ProfileEditPhoneActivity
 import com.synergy.android.profile.ProfileEditPhoneActivity.Companion.PHONE_EXTRA_NAME
 import com.synergy.android.profile.ProfileEditPhoneActivity.Companion.PHONE_REQUEST_CODE
 import com.synergy.android.recovery.RecoveryActivity
@@ -110,5 +107,9 @@ class Router(private val appContext: Context) {
 
     fun orders(context: Context) {
         context.startActivity(Intent(context, OrdersActivity::class.java))
+    }
+
+    fun addCar(context: Context) {
+        context.startActivity(Intent(context, AddCarActivity::class.java))
     }
 }

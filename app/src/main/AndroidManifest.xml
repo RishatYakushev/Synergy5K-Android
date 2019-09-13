@@ -15,7 +15,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup,GoogleAppIndexingWarning">
-        <activity android:name=".order.OrdersActivity"
+        <activity
+            android:name=".profile.AddCarActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".order.OrdersActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".profile.LoyaltyActivity"

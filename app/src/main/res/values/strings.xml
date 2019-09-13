@@ -61,6 +61,7 @@
     <string name="profile_card_loyalty_desc">Программа\nлояльности</string>
     <string name="profile_card_orders_desc">Мои\nзаказы</string>
     <string name="profile_add_car">Добавьте\nавтомобиль</string>
+    <string name="profile_add_car2">Добавить автомобиль</string>
     <string name="profile_privacy">Пользовательское соглашение</string>
 
     <!--Profile Edit screen-->
@@ -70,6 +71,7 @@
     <string name="profile_edit_subtitle_email">E-mail</string>
     <string name="profile_edit_subtitle_phone">Телефон</string>
     <string name="profile_edit_change_avatar">Изменить фотографию</string>
+    <string name="profile_edit_add_avatar">Добавить фотографию</string>
     <string name="profile_edit_toolbar_title">Редактировать профиль</string>
     <string name="profile_edit_name_toolbar_title">ФИО</string>
     <string name="profile_edit_phone_toolbar_title">Изменить телефон</string>
@@ -89,5 +91,13 @@
     <string name="order_done_tab_title">Выполненные</string>
     <string name="order_wait_call_button">Позвонить</string>
     <string name="order_wait_map_button">Маршрут</string>
+
+    <!--Add car screen-->
+    <string name="number_title">Государственный номер</string>
+    <string name="vin_text">VIN номер</string>
+    <string name="type_body_text">Тип кузова</string>
+    <string name="brand_text">Марка автомобиля</string>
+    <string name="model_text">Модель автомобиля</string>
+    <string name="year_text">Год выпуска</string>
 
 </resources>

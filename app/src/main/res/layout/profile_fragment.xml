@@ -302,6 +302,7 @@
             app:layout_constraintTop_toBottomOf="@id/cv_small_discount">
 
             <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/car_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="16dp">

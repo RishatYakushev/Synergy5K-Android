@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_fill"
+    tools:context=".profile.AddCarActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        style="@style/Toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="56dp"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_car"
+                android:layout_width="122dp"
+                android:layout_height="122dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/ic_car_background"
+                android:padding="28dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription"
+                tools:src="@drawable/ic_car_placeholder" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_add_photo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:drawableStart="@drawable/ic_camera_add"
+                android:drawablePadding="8dp"
+                android:gravity="center"
+                android:text="@string/profile_edit_add_avatar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iv_car" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                app:layout_constraintTop_toBottomOf="@id/tv_add_photo">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_number_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/number_title"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/et_number_l"
+                    style="@style/AuthScreen_TextInputLayout"
+                    app:boxBackgroundColor="@android:color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_number_title">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_number"
+                        style="@style/AuthScreen_TextInputEditText" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_type_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/type_body_text"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/et_number_l" />
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/sn_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/spinner_bg"
+                    android:popupBackground="#ffffff"
+                    app:layout_constraintTop_toBottomOf="@id/tv_type_title"
+                    tools:listitem="@layout/item_spinner" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_brand_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/brand_text"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/sn_type" />
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/sn_brand"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/spinner_bg"
+                    android:popupBackground="#ffffff"
+                    app:layout_constraintTop_toBottomOf="@id/tv_brand_title"
+                    tools:listitem="@layout/item_spinner" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_model_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/model_text"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/sn_brand" />
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/sn_model"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/spinner_bg"
+                    android:popupBackground="#ffffff"
+                    app:layout_constraintTop_toBottomOf="@id/tv_model_title"
+                    tools:listitem="@layout/item_spinner" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_year_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/year_text"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/sn_model" />
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/sn_year"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/spinner_bg"
+                    android:popupBackground="#ffffff"
+                    app:layout_constraintTop_toBottomOf="@id/tv_year_title"
+                    tools:listitem="@layout/item_spinner" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_vin_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/vin_text"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/sn_year" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/et_vin_l"
+                    style="@style/AuthScreen_TextInputLayout"
+                    app:boxBackgroundColor="@android:color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_vin_title">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_vin"
+                        style="@style/AuthScreen_TextInputEditText" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
