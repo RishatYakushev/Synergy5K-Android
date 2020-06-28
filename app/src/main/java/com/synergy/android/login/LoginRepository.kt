@@ -2,12 +2,12 @@ package com.synergy.android.login
 
 import com.synergy.android.login.entities.LoginRequest
 import com.synergy.android.login.entities.LoginResponse
+import com.synergy.android.main.AuthorizationModel
 import com.synergy.android.model.entities.Session
 import com.synergy.android.model.network.ApiResponse
 import com.synergy.android.model.network.IApi
 import com.synergy.android.model.network.NetworkBoundResource
 import com.synergy.android.model.network.errors.ErrorHandler
-import com.synergy.android.profile.AuthorizationModel
 import kotlinx.coroutines.*
 
 class LoginRepository(

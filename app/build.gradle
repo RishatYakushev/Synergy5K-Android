@@ -26,6 +26,7 @@ android {
         testInstrumentationRunnerArgument "runnerBuilder",
                 "de.mannodermaus.junit5.AndroidJUnit5Builder"
         buildConfigField 'String', 'BASE_URL', "\"https://api.com\""
+        multiDexEnabled true
     }
     signingConfigs {
         debug {
@@ -85,8 +86,13 @@ dependencies {
     implementation coroutinesLibs
     implementation kodeinLibs
     implementation roomLibs
-    implementation 'androidx.appcompat:appcompat:1.0.2'
-    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation mapLibs
+
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
+    kapt 'com.github.bumptech.glide:compiler:4.9.0'
+
+    implementation 'com.redmadrobot:input-mask-android:4.3.1'
+
     kapt compilerLibs
 
     testImplementation unitTestLibs

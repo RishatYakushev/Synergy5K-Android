@@ -4,10 +4,19 @@
     <string name="signin_text">Войти</string>
     <string name="name_hint">Имя</string>
     <string name="surname_hint">Фамилия</string>
+    <string name="surname2_hint">Отчество</string>
     <string name="phone_hint">Номер телефона</string>
     <string name="add_password_hint">Придумайте пароль</string>
     <string name="password_hint">Пароль</string>
     <string name="restore_pass_text">Не помню пароль</string>
+    <string name="confirm_text">Подтвердить</string>
+    <string name="pincode_text">Почти все готово</string>
+    <string name="pincode_desc_text">Мы отправили код регистрации на указанный номер телефона</string>
+    <string name="recovery_title_text">Восстановление доступа</string>
+    <string name="recovery_button_text">Восстановить доступ</string>
+    <string name="recovery_desc_text">Введите номер телефона, указанный при регистрации</string>
+    <string name="recovery_new_desc_text">Придумайте новый пароль для вашей учетной записи</string>
+    <string name="recovery_new_button_text">Сохранить</string>
     <string name="empty_error">Username and Password should not be empty</string>
     <string name="logout">Logout</string>
 
@@ -26,4 +35,59 @@
     <string name="books">Books</string>
     <string name="registration_text">Регистрация</string>
     <string name="empty_field_text">Поле не должно быть пустым</string>
+    <string name="phone_validate_text">Введите корректный номер телефона</string>
+
+    <!--Menu items-->
+    <string name="map_menu_text">Карта</string>
+    <string name="profile_menu_text">Профиль</string>
+    <string name="action_menu_text">Акции</string>
+    <string name="settings_menu_text">Настройки</string>
+    <string name="filter_text">Фильтр</string>
+    <string name="list_text">Список</string>
+    <string name="wheel_menu_text">Шиномонтаж</string>
+    <string name="wash_menu_text">Автомойка</string>
+    <string name="service_menu_text">Автосервис</string>
+    <string name="done_menu_text">Готово</string>
+
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">
+        AIzaSyBv2XFl9mc8khorBmyi45VMKvkEEnUJ-mE
+    </string>
+
+    <!--Profile screen-->
+    <string name="profile_logout_text">Выйти</string>
+    <string name="profile_card_title_discount">ваша\nскидка</string>
+    <string name="profile_card_title_common_discount">групповая\nскидка</string>
+    <string name="profile_card_title_point">баллов\nна счете</string>
+    <string name="profile_card_loyalty_desc">Программа\nлояльности</string>
+    <string name="profile_card_orders_desc">Мои\nзаказы</string>
+    <string name="profile_add_car">Добавьте\nавтомобиль</string>
+    <string name="profile_privacy">Пользовательское соглашение</string>
+
+    <!--Profile Edit screen-->
+    <string name="profile_edit_title_private">Личная информация</string>
+    <string name="profile_edit_subtitle_name">ФИО</string>
+    <string name="profile_edit_title_contact">Контактная информация</string>
+    <string name="profile_edit_subtitle_email">E-mail</string>
+    <string name="profile_edit_subtitle_phone">Телефон</string>
+    <string name="profile_edit_change_avatar">Изменить фотографию</string>
+    <string name="profile_edit_toolbar_title">Редактировать профиль</string>
+    <string name="profile_edit_name_toolbar_title">ФИО</string>
+    <string name="profile_edit_phone_toolbar_title">Изменить телефон</string>
+    <string name="profile_edit_phone_button">Подтвердить новый номер</string>
+    <string name="profile_edit_phone_put_pincode">Введите код из смс-сообщения</string>
+    <string name="profile_edit_phone_put_phone">Введите ваш новый номер телефона, мы пришлем на него смс для активации</string>
+
+    <!--Loyalty screen-->
+    <string name="loyalty_toolbar_title">Программа лояльности</string>
+    <string name="loyalty_title">Ваш реферальный код</string>
+    <string name="loyalty_description">Это ваш реферальный код, который вы можете скопировать и поделиться. С помошью которого вы можете подключать ваших друзей, знакомы и родственников к партнерской программе.</string>
+    <string name="loyalty_description2">Чтобы приглашать и подключать ваших друзей, знакомых и родственников к партнерской программе им нужно установить приложение и отсканировать этот реферальный код.</string>
+
+    <!--Order screen-->
+    <string name="orders_toolbar_title">Мои заказы</string>
+    <string name="order_wait_tab_title">В ожидании</string>
+    <string name="order_done_tab_title">Выполненные</string>
+    <string name="order_wait_call_button">Позвонить</string>
+    <string name="order_wait_map_button">Маршрут</string>
+
 </resources>

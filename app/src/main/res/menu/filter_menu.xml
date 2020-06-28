@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/wheel_action"
+        android:title="@string/wheel_menu_text"
+        android:icon="@drawable/ic_wheel_menu"
+        android:checkable="true"/>
+    <item
+        android:id="@+id/wash_action"
+        android:title="@string/wash_menu_text"
+        android:icon="@drawable/ic_wash_menu"
+        android:checkable="true"/>
+    <item
+        android:id="@+id/service_action"
+        android:title="@string/service_menu_text"
+        android:icon="@drawable/ic_service_menu"
+        android:checkable="true"/>
+</menu>

@@ -9,9 +9,8 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@android:color/white"
         android:gravity="center"
-        android:padding="16dp"
+        android:padding="32dp"
         tools:context=".login.LoginActivity">
 
         <com.synergy.android.util.ui.GradientTextView
@@ -35,7 +34,6 @@
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/et_phone_l"
             style="@style/AuthScreen_TextInputLayout"
-            android:hint="@string/phone_hint"
             app:layout_constraintBottom_toTopOf="@id/guideline"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent">
@@ -64,24 +62,11 @@
 
         <com.synergy.android.util.ui.GradientMaterialButton
             android:id="@+id/bt_login"
-            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/Gradient_Button"
             android:text="@string/signin_text"
-            android:textSize="18sp"
-            app:layout_constraintBottom_toTopOf="@id/bt_restore_pass"
+            app:layout_constraintBottom_toTopOf="@id/bt_signup"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/et_password_l" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/bt_restore_pass"
-            style="@style/SimpleBlue_MaterialButton"
-            android:gravity="center"
-            android:text="@string/restore_pass_text"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/et_password_l" />
 
         <com.google.android.material.button.MaterialButton
@@ -92,7 +77,17 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/bt_restore_pass" />
+            app:layout_constraintTop_toBottomOf="@id/et_password_l" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/bt_restore_pass"
+            style="@style/SimpleBlue_MaterialButton"
+            android:gravity="center"
+            android:text="@string/restore_pass_text"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/bt_signup" />
 
         <ProgressBar
             android:id="@+id/pb_progress"

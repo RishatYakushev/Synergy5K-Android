@@ -9,9 +9,8 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@android:color/white"
         android:gravity="center"
-        android:padding="16dp"
+        android:padding="32dp"
         tools:context=".registration.RegistrationActivity">
 
         <com.synergy.android.util.ui.GradientTextView
@@ -65,7 +64,6 @@
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/et_phone_l"
             style="@style/AuthScreen_TextInputLayout"
-            android:hint="@string/phone_hint"
             app:boxBackgroundColor="@android:color/white"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -96,11 +94,8 @@
 
         <com.synergy.android.util.ui.GradientMaterialButton
             android:id="@+id/bt_signup"
-            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/Gradient_Button"
             android:text="@string/signup_button"
-            android:textSize="18sp"
             app:layout_constraintBottom_toTopOf="@id/bt_signin"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"

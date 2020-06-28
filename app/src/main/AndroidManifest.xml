@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.synergy.android">
 
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -14,15 +15,35 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup,GoogleAppIndexingWarning">
+        <activity android:name=".order.OrdersActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".profile.LoyaltyActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".profile.ProfileEditPhoneActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".profile.ProfileEditNameActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".profile.ProfileEditActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".recovery.RecoveryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".pincode.PincodeActivity"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".registration.RegistrationActivity"
-            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar" />
+            android:screenOrientation="portrait" />
         <activity
-            android:name=".profile.ProfileActivity"
-            android:label="@string/app_name" />
+            android:name=".main.MainActivity"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".login.LoginActivity"
-            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar" />
+            android:screenOrientation="portrait" />
         <activity
             android:name=".MainActivity"
             android:theme="@android:style/Theme.NoDisplay">
@@ -32,6 +53,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
     </application>
 
 </manifest>

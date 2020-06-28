@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="32dp"
+        tools:context=".pincode.PincodeActivity">
+
+        <com.synergy.android.util.ui.GradientTextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/pincode_text"
+            android:textSize="34sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/ov_pincode"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            style="@style/Subtitle_TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/pincode_desc_text"
+            app:layout_constraintBottom_toTopOf="@id/ov_pincode"
+            app:layout_constraintTop_toBottomOf="@id/tv_title" />
+
+        <com.poovam.pinedittextfield.LinePinField
+            android:id="@+id/ov_pincode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:inputType="number"
+            android:textSelectHandle="@drawable/text_handle"
+            app:bottomTextPaddingDp="10dp"
+            app:distanceInBetween="5dp"
+            app:highlightColor="@android:color/black"
+            app:highlightType="allFields"
+            app:isCustomBackground="true"
+            app:itemBackground="@android:color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:lineThickness="2dp"
+            app:noOfFields="4"
+            tools:text="1234" />
+
+        <com.synergy.android.util.ui.GradientMaterialButton
+            android:id="@+id/bt_submit"
+            style="@style/Gradient_Button"
+            android:text="@string/confirm_text"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ov_pincode" />
+
+        <ProgressBar
+            android:id="@+id/pb_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:indeterminate="true"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="visible" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

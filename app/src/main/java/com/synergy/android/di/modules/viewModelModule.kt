@@ -3,6 +3,7 @@ package com.synergy.android.di.modules
 import androidx.lifecycle.ViewModelProvider
 import com.synergy.android.login.LoginViewModel
 import com.synergy.android.profile.ProfileViewModel
+import com.synergy.android.registration.RegistrationViewModel
 import com.synergy.android.util.ViewModelFactory
 import com.synergy.android.util.bindViewModel
 import org.kodein.di.Kodein
@@ -15,5 +16,8 @@ val viewModelModule = Kodein.Module(name = "viewModelModule") {
     bind<ViewModelProvider.Factory>() with singleton { ViewModelFactory(dkodein) }
 
     bindViewModel<LoginViewModel>() with provider { LoginViewModel(instance(), instance()) }
-    bindViewModel<ProfileViewModel>() with provider { ProfileViewModel(instance(), instance()) }
+    bindViewModel<RegistrationViewModel>() with provider {
+        RegistrationViewModel(instance(), instance())
+    }
+    bindViewModel<ProfileViewModel>() with provider { ProfileViewModel(instance()) }
 }

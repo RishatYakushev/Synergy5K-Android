@@ -37,7 +37,7 @@ class LoginActivity : AppCompatActivity(), KodeinAware {
 
     private fun navigateToProfile() {
         val router by kodein.instance<Router>()
-        router.profile(context = this, clearStack = true)
+        router.main(context = this, clearStack = true)
     }
 
     private fun navigateToSignup() {
@@ -45,9 +45,15 @@ class LoginActivity : AppCompatActivity(), KodeinAware {
         router.registration(context = this, clearTop = true)
     }
 
+    private fun navigateToRecovery() {
+        val router by kodein.instance<Router>()
+        router.recovery(context = this)
+    }
+
     private fun initListeners() {
         bt_login.setOnClickListener { login() }
         bt_signup.setOnClickListener { navigateToSignup() }
+        bt_restore_pass.setOnClickListener { navigateToRecovery() }
         et_password.apply {
             setOnEditorActionListener { _, actionId, _ ->
                 if (actionId == EditorInfo.IME_ACTION_GO) {

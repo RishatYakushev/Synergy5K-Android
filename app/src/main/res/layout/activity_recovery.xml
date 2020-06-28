@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="32dp"
+        tools:context=".recovery.RecoveryActivity">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:textSize="18sp"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <com.synergy.android.util.ui.GradientTextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/recovery_title_text"
+            android:textSize="34sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/tv_desc"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_desc"
+            style="@style/Subtitle_TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/recovery_desc_text"
+            app:layout_constraintBottom_toTopOf="@id/et_password_l"
+            app:layout_constraintTop_toBottomOf="@id/tv_title" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/et_phone_l"
+            style="@style/AuthScreen_TextInputLayout"
+            app:boxBackgroundColor="@android:color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="invisible">
+
+            <com.synergy.android.util.ui.CheckableTextInputEditText
+                android:id="@+id/et_phone"
+                style="@style/AuthScreen_TextInputEditText"
+                android:imeOptions="actionNext"
+                android:inputType="phone" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/et_password_l"
+            style="@style/AuthScreen_TextInputLayout"
+            android:hint="@string/add_password_hint"
+            app:boxBackgroundColor="@android:color/white"
+            app:layout_constraintBottom_toTopOf="@id/guideline"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <com.synergy.android.util.ui.CheckableTextInputEditText
+                android:id="@+id/et_password"
+                style="@style/AuthScreen_TextInputEditText"
+                android:imeOptions="actionGo"
+                android:inputType="textPassword" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/et_repeat_password_l"
+            style="@style/AuthScreen_TextInputLayout"
+            android:hint="@string/add_password_hint"
+            app:boxBackgroundColor="@android:color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/guideline">
+
+            <com.synergy.android.util.ui.CheckableTextInputEditText
+                android:id="@+id/et_repeat_password"
+                style="@style/AuthScreen_TextInputEditText"
+                android:imeOptions="actionGo"
+                android:inputType="textPassword" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.synergy.android.util.ui.GradientMaterialButton
+            android:id="@+id/bt_submit"
+            style="@style/Gradient_Button"
+            android:text="@string/recovery_button_text"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_phone_l" />
+
+        <ProgressBar
+            android:id="@+id/pb_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:indeterminate="true"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="visible" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

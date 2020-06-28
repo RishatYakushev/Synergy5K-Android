@@ -5,18 +5,18 @@ import androidx.room.Insert
 import androidx.room.OnConflictStrategy.REPLACE
 import androidx.room.Query
 import androidx.room.Transaction
-import com.synergy.android.profile.entities.Book
-import com.synergy.android.profile.entities.Profile
+import com.synergy.android.main.entities.Book
+import com.synergy.android.main.entities.Profile
 
 @Dao
 abstract class ProfileDao {
     @Insert(onConflict = REPLACE)
     abstract suspend fun insertProfile(vararg profile: Profile)
 
-    @Query("SELECT * FROM profile LIMIT 1")
+    @Query("SELECT * FROM main LIMIT 1")
     abstract suspend fun getProfile(): Profile?
 
-    @Query("DELETE FROM profile")
+    @Query("DELETE FROM main")
     abstract suspend fun clearProfile()
 
     @Insert(onConflict = REPLACE)

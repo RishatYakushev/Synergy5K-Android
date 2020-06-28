@@ -3,14 +3,14 @@ package com.synergy.android
 import com.synergy.android.di.modules.netModule
 import com.synergy.android.login.entities.LoginRequest
 import com.synergy.android.login.entities.LoginResponse
+import com.synergy.android.main.entities.Book
+import com.synergy.android.main.entities.Profile
+import com.synergy.android.main.entities.ProfileResponse
 import com.synergy.android.model.entities.Session
 import com.synergy.android.model.network.ApiErrorResponse
 import com.synergy.android.model.network.ApiSuccessResponse
 import com.synergy.android.model.network.IApi
 import com.synergy.android.model.network.errors.ServerError
-import com.synergy.android.profile.entities.Book
-import com.synergy.android.profile.entities.Profile
-import com.synergy.android.profile.entities.ProfileResponse
 import kotlinx.coroutines.runBlocking
 import okhttp3.mockwebserver.MockResponse
 import okhttp3.mockwebserver.MockWebServer
@@ -107,7 +107,7 @@ object ApiTest : Spek({
         }
     }
 
-    group("profile") {
+    group("main") {
         test("happy path") {
             val expectedId = 0
             val expectedUserName = "John Snow"
@@ -148,7 +148,7 @@ object ApiTest : Spek({
 
             val expectedToken = "Hey Token is here"
 
-            val url = mockServer.url("/v1/profile/")
+            val url = mockServer.url("/v1/main/")
             val expectedBaseUrl = url.scheme() + "://" + url.host() + ":" + url.port()
             val kodein = Kodein {
                 import(netModule, allowOverride = true)
@@ -197,7 +197,7 @@ object ApiTest : Spek({
 
             val expectedToken = "No Favorite Book Token"
 
-            val url = mockServer.url("/v1/profile/")
+            val url = mockServer.url("/v1/main/")
             val expectedBaseUrl = url.scheme() + "://" + url.host() + ":" + url.port()
             val kodein = Kodein {
                 import(netModule, allowOverride = true)
@@ -240,7 +240,7 @@ object ApiTest : Spek({
 
             val expectedToken = "Hey Token is here"
 
-            val url = mockServer.url("/v1/profile/")
+            val url = mockServer.url("/v1/main/")
             val expectedBaseUrl = url.scheme() + "://" + url.host() + ":" + url.port()
             val kodein = Kodein {
                 import(netModule, allowOverride = true)
